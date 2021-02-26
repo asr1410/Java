@@ -8,5 +8,6 @@ public class UserInput2 {
         // System.out.println(a);
         String s = sc.nextLine();
         System.out.println(s);
+        sc.close();
     }
 }
