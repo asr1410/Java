@@ -10,5 +10,9 @@ public class StringsMethod {
         // System.out.println(para.trim());
         System.out.println(para.substring(8));
         System.out.println(para.substring(0, para.length()));
+        System.out.println(para.replace('r', 'p'));
+        System.out.println(para.replace("h", "hello"));
+        System.out.println(para.startsWith("    "));
+
     }
 }
