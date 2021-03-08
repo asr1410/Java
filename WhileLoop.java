@@ -22,6 +22,7 @@ public class WhileLoop {
         for (int j = i; j < 30; j++) {
             System.out.println(num + " X " + j + " = " + (num * j));
         }
+        System.out.println("all loop executed");
         sc.close();
     }
 }
