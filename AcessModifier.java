@@ -31,9 +31,9 @@ class Cylinder {
 
 public class AcessModifier {
     public static void main(String[] args) {
-        Cylinder myCylinder = new Cylinder();
-        myCylinder.setHeight(10);
-        myCylinder.setRadius(10);
+        Cylinder myCylinder = new Cylinder(10, 10);
+        // myCylinder.setHeight(10);
+        // myCylinder.setRadius(10);
         // System.out.println(myCylinder.getHeight());
         // System.out.println(myCylinder.getRadius());
         System.out.println(myCylinder.getSurfaceArea());
