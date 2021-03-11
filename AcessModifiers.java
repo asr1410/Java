@@ -8,6 +8,11 @@ class Cylinder {
         this.height = height;
     }
 
+    public Cylinder() {
+        this.radius = 5;
+        this.height = 4;
+    }
+
     public void setRadius(int radius) {
         this.radius = radius;
     }
@@ -29,7 +34,7 @@ class Cylinder {
     }
 }
 
-public class AcessModifier {
+public class AcessModifiers {
     public static void main(String[] args) {
         Cylinder myCylinder = new Cylinder(10, 10);
         // myCylinder.setHeight(10);
