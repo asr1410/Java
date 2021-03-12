@@ -37,5 +37,6 @@ public class Inheritence {
 
     public static void main(String[] args) {
         Derived3 d = new Derived3();
+        d.getX();
     }
 }
