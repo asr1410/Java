@@ -48,5 +48,7 @@ public class InterfaceVsJava {
         cycleAman.getValue();
         // you cannot modify the properties in the interface
         // cycleAman.a = 45;
+        cycleAman.blowHornk3g();
+        cycleAman.blowHornmhn();
     }
 }
