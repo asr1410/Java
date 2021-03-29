@@ -42,10 +42,38 @@ public class ArraySorting {
         // sum(arr);
 
         // RETURN THE ARRAY FROM THE FUCTION
-        int arr[] = m1();
-        for (int i : arr) {
-            System.out.println(i + " ");
-        }
+        // int arr[] = m1();
+        // for (int i : arr) {
+        // System.out.println(i + " ");
+        // }
+
+        // DECLARE THE ARRAY
+        // int intArray[] = new int[3];
+        // byte byteArray[] = new byte[3];
+        // short shortArray[] = new short[3];
+        // String strArray[] = new String[3];
+        // System.out.println(intArray.getClass());
+        // System.out.println(intArray.getClass().getSuperclass());
+        // System.out.println(byteArray.getClass());
+        // System.out.println(shortArray.getClass());
+        // System.out.println(strArray.getClass());
+
+        // CLONE THE ARRAY
+        // using clone method it create a reference where it store the reference of the
+        // array we want to clone thus the copy array is created using the reference of
+        // original array
+        // int intArray[] = { 1, 2, 3 };
+        // int cloneArray[] = intArray.clone();
+        // System.out.println(cloneArray == intArray);
+        // for (int i : cloneArray) {
+        // System.out.println(i);
+        // }
+
+        // CLONE 2D ARRAY
+        int intArray[][] = { { 1, 2, 3 }, { 4, 5 } };
+        int cloneArray[][] = intArray.clone();
+        System.out.println(intArray == cloneArray);
+        System.out.println(intArray[0] == cloneArray[0]);
     }
 
     // FUNCTION FOR GETTING SUM OF THE ARRAY
