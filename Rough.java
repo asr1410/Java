@@ -1,25 +1,27 @@
 import java.util.Scanner;
 
 /**
- * Rough
+ * TestMain
  */
 public class Rough {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int num = sc.nextInt();
-        int countyes = 0;
-        int countno = 0;
+        byte num = sc.nextByte();
+        byte countPass = 0, countFail = 0;
         for (int i = 0; i < num; i++) {
-            String s = sc.next();
-            if (s.equals("yes") || s.equals("YES") || s.equals("Yes")) {
-                countyes++;
-            } else if (s.equals("no") || s.equals("NO") || s.equals("No")) {
-                countno++;
+            String arr = sc.next();
+            if (arr.equalsIgnoreCase("yes")) {
+                countPass++;
+            } else if (arr.equalsIgnoreCase("no")) {
+                countFail++;
+            } else {
+                System.out.println("Invalid");
+                System.exit(1);
             }
         }
-        System.out.println("Yes count " + countyes);
-        System.out.println("No count " + countno);
+        System.out.println("Yes count " + countPass);
+        System.out.println("No count " + countFail);
         sc.close();
     }
 }
