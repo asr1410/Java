@@ -27,10 +27,15 @@ public class Rough {
         // System.out.println(input);
 
         // METHOD 3 FOR STRING REVERSE
-        char[] try1 = input.toCharArray();
-        for (int i = try1.length - 1; i >= 0; i--) {
-            System.out.printf("%c", try1[i]);
-        }
+        // char[] try1 = input.toCharArray();
+        // for (int i = try1.length - 1; i >= 0; i--) {
+        // System.out.printf("%c", try1[i]);
+        // }
+
+        // METHOD 4 FOR STRING REVERSE
+        // StringBuffer s = new StringBuffer(input);
+        // s.reverse();
+        // System.out.println(s);
         sc.close();
     }
 }
