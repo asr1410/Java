@@ -1,27 +1,36 @@
 import java.util.Scanner;
 
 /**
- * TestMain
+ * Rough
  */
 public class Rough {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        byte num = sc.nextByte();
-        byte countPass = 0, countFail = 0;
-        for (int i = 0; i < num; i++) {
-            String arr = sc.next();
-            if (arr.equalsIgnoreCase("yes")) {
-                countPass++;
-            } else if (arr.equalsIgnoreCase("no")) {
-                countFail++;
-            } else {
-                System.out.println("Invalid");
-                System.exit(1);
-            }
+        String input = "aman";
+
+        // METHOD 1 FOR STRING REVERSE
+        // byte[] strAsByte = input.getBytes();
+        // byte result[] = new byte[strAsByte.length];
+        // for (int i = 0; i < result.length; i++) {
+        // result[i] = strAsByte[result.length - i - 1];
+        // }
+        // String input1 = new String(result);
+        // System.out.println(input1);
+        // System.out.println(input);
+
+        // METHOD 2 FOR STRING REVERSE
+        // StringBuilder input1 = new StringBuilder();
+        // input1.append(input);
+        // input1.reverse();
+        // System.out.println(input1);
+        // System.out.println(input);
+
+        // METHOD 3 FOR STRING REVERSE
+        char[] try1 = input.toCharArray();
+        for (int i = try1.length - 1; i >= 0; i--) {
+            System.out.printf("%c", try1[i]);
         }
-        System.out.println("Yes count " + countPass);
-        System.out.println("No count " + countFail);
         sc.close();
     }
 }
