@@ -12,6 +12,14 @@ public class method {
         return z;
     }
 
+    public void right() {
+        System.out.println("right");
+    }
+
+    public static void left() {
+        System.out.println("left");
+    }
+
     public static void main(String[] args) {
         int a = 5;
         int b = 3;
@@ -20,5 +28,8 @@ public class method {
         // int c = obj.logic(a, b);
         int c = logic(a, b);
         System.out.println(c);
+        method d = new method();
+        d.right();
+        left();
     }
 }
