@@ -5,12 +5,32 @@ public class ArraySetWithIndexArray {
         for (int i = 0; i < nums.length; ++i) {
             if (index[i] == i) {
                 target[index[i]] = nums[i];
+                System.out.print("nums   ->");
+                for (int ele : nums) {
+                    System.out.print(ele + " ");
+                }
+                System.out.println();
+                System.out.print("target ->");
+                for (int ele : target) {
+                    System.out.print(ele + " ");
+                }
+                System.out.println();
             } else {
                 int temp;
                 for (int j = index[i]; j < i + 1; j++) {
                     temp = target[j];
                     target[j] = nums[i];
                     nums[i] = temp;
+                    System.out.print("nums   ->");
+                    for (int ele : nums) {
+                        System.out.print(ele + " ");
+                    }
+                    System.out.println();
+                    System.out.print("target ->");
+                    for (int ele : target) {
+                        System.out.print(ele + " ");
+                    }
+                    System.out.println();
                 }
             }
         }
