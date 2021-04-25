@@ -3,27 +3,25 @@
  */
 public class IncreaseDecreaseString {
     public static String sortString(String s) {
-        int len = s.length();
-        int[] freq = new int[26];
-        for (int index = 0; index < len; index++) {
-            freq[s.charAt(index) - 'a']++;
+        int length = s.length();
+        int[] frequency = new int[26];
+        for (char i : s.toCharArray()) {
+            frequency[i - 'a']++;
         }
-        StringBuilder sb = new StringBuilder(len);
         int count = 0;
-        while (count < len) {
-            // sorting up
-            for (int i = 0; i < 26; i++) {
-                if (freq[i] > 0) {
+        StringBuilder sb = new StringBuilder(s.length());
+        while (count < length) {
+            for (int i = 0; i < frequency.length; i++) {
+                if (frequency[i] > 0) {
                     sb.append((char) (i + 'a'));
-                    freq[i] = freq[i] - 1;
+                    frequency[i]--;
                     count++;
                 }
             }
-            // sorting down
-            for (int i = 25; i >= 0; i--) {
-                if (freq[i] > 0) {
-                    sb.append((char) (i + 'a'));
-                    freq[i] = freq[i] - 1;
+            for (int j = 25; j >= 0; j--) {
+                if (frequency[j] > 0) {
+                    sb.append((char) (j + 'a'));
+                    frequency[j]--;
                     count++;
                 }
             }
