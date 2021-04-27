@@ -1,31 +1,32 @@
-// import javax.swing.tree.TreeNode;
+/**
+ * MergeTwoBinaryTree
+ */
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
 
-// public class MergeTwoBinaryTree {
-// /**
-// * Definition for a binary tree node. public class TreeNode { int val;
-// TreeNode
-// * left; TreeNode right; TreeNode() {} TreeNode(int val) { this.val = val; }
-// * TreeNode(int val, TreeNode left, TreeNode right) { this.val = val;
-// this.left
-// * = left; this.right = right; } }
-// */
-// public int sum(TreeNode root1, TreeNode root2) {
-// if (root1.val == null || root.value == null) {
-// return 0;
-// }
-// }
+    public TreeNode(int val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
 
-// public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
-// if (root1 == null && root2 == null) {
-// return root1;
-// }
-// root1.val += root2.val;
-// mergeTrees(root1.left, root2.left);
-// mergeTrees(root1.right, root2.right);
-// return root1;
-// }
+}
 
-// public static void main(String[] args) {
+public class MergeTwoBinaryTree {
+    public TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
+        if (t1 == null && t2 == null) {
+            return null;
+        }
+        int val = (t1 == null ? 0 : t1.val) + (t2 == null ? 0 : t2.val);
+        TreeNode newNode = new TreeNode(val);
+        newNode.left = mergeTrees(t1 == null ? null : t1.left, t2 == null ? null : t2.left);
+        newNode.right = mergeTrees(t1 == null ? null : t1.right, t2 == null ? null : t2.right);
+        return newNode;
+    }
 
-// }
-// }
+    public static void main(String[] args) {
+
+    }
+}
