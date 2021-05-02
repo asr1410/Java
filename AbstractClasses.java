@@ -1,6 +1,3 @@
-/**
- * AbstractClasses
- */
 abstract class Root1 {
     private int paremeters;
 
