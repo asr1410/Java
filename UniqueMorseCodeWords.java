@@ -6,16 +6,15 @@ public class UniqueMorseCodeWords {
         String[] arr = new String[] { ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-",
                 ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
                 "--.." };
-        Set<String> set = new HashSet<>();
-        for (String s : words) {
+        Set<String> s = new HashSet<>();
+        for (String string : words) {
             StringBuilder sb = new StringBuilder();
-            for (char ch : s.toCharArray())
-                sb.append(arr[ch - 'a']);
-            set.add(sb.toString());
+            for (char c : string.toCharArray()) {
+                sb.append(arr[c - 'a']);
+            }
+            s.add(sb.toString());
         }
-
-        return set.size();
-
+        return s.size();
     }
 
     public static void main(String[] args) {
